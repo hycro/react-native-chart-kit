@@ -22,6 +22,7 @@ export interface AbstractChartConfig extends ChartConfig {
   height?: number;
   paddingTop?: number;
   paddingRight?: number;
+  paddingLeft?: number;
   horizontalLabelRotation?: number;
   formatYLabel?: (yLabel: string) => string;
   labels?: string[];
