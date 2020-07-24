@@ -102,7 +102,8 @@ declare class BarChart extends AbstractChart<BarChartProps, BarChartState> {
     width,
     height,
     paddingTop,
-    paddingRight
+    paddingRight,
+    paddingLeft
   }: Pick<
     Pick<
       AbstractChartConfig,
@@ -148,7 +149,7 @@ declare class BarChart extends AbstractChart<BarChartProps, BarChartState> {
       | "scrollableInfoOffset"
       | "scrollableInfoSize"
     >,
-    "height" | "width" | "paddingTop" | "paddingRight"
+    "height" | "width" | "paddingTop" | "paddingRight" | "paddingLeft"
   > & {
     data: number[];
   }) => JSX.Element[];
@@ -157,7 +158,8 @@ declare class BarChart extends AbstractChart<BarChartProps, BarChartState> {
     width,
     height,
     paddingTop,
-    paddingRight
+    paddingRight,
+    paddingLeft
   }: Pick<
     Pick<
       AbstractChartConfig,
@@ -203,7 +205,7 @@ declare class BarChart extends AbstractChart<BarChartProps, BarChartState> {
       | "scrollableInfoOffset"
       | "scrollableInfoSize"
     >,
-    "height" | "width" | "paddingTop" | "paddingRight"
+    "height" | "width" | "paddingTop" | "paddingRight" | "paddingLeft"
   > & {
     data: number[];
   }) => JSX.Element[];

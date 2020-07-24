@@ -96,10 +96,11 @@ class BarChart extends AbstractChart<BarChartProps, BarChartState> {
     width,
     height,
     paddingTop,
-    paddingRight
+    paddingRight,
+    paddingLeft
   }: Pick<
     Omit<AbstractChartConfig, "data">,
-    "width" | "height" | "paddingRight" | "paddingTop"
+    "width" | "height" | "paddingRight" | "paddingTop" | "paddingLeft"
   > & {
     data: number[];
   }) => {
@@ -113,7 +114,7 @@ class BarChart extends AbstractChart<BarChartProps, BarChartState> {
           key={Math.random()}
           x={
             paddingRight +
-            (i * (width - paddingRight)) / data.length +
+            (i * (width - paddingRight - paddingLeft)) / data.length +
             barWidth / 2
           }
           y={((baseHeight - barHeight) / 4) * 3 + paddingTop}
@@ -130,10 +131,11 @@ class BarChart extends AbstractChart<BarChartProps, BarChartState> {
     width,
     height,
     paddingTop,
-    paddingRight
+    paddingRight,
+    paddingLeft
   }: Pick<
     Omit<AbstractChartConfig, "data">,
-    "width" | "height" | "paddingRight" | "paddingTop"
+    "width" | "height" | "paddingRight" | "paddingTop" | "paddingLeft"
   > & {
     data: number[];
   }) => {
@@ -147,7 +149,7 @@ class BarChart extends AbstractChart<BarChartProps, BarChartState> {
           key={Math.random()}
           x={
             paddingRight +
-            (i * (width - paddingRight)) / data.length +
+            (i * (width - paddingRight - paddingLeft)) / data.length +
             barWidth / 1
           }
           y={((baseHeight - barHeight) / 4) * 3 + paddingTop - 1}
@@ -265,7 +267,8 @@ class BarChart extends AbstractChart<BarChartProps, BarChartState> {
                 ...config,
                 data: data.datasets[0].data,
                 paddingTop: paddingTop as number,
-                paddingRight: paddingRight as number
+                paddingRight: paddingRight as number,
+                paddingLeft: paddingLeft as number
               })}
           </G>
           <G>
@@ -274,7 +277,8 @@ class BarChart extends AbstractChart<BarChartProps, BarChartState> {
                 ...config,
                 data: data.datasets[0].data,
                 paddingTop: paddingTop as number,
-                paddingRight: paddingRight as number
+                paddingRight: paddingRight as number,
+                paddingLeft: paddingLeft as number
               })}
           </G>
         </Svg>
